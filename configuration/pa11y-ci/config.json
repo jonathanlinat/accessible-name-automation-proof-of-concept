@@ -1,0 +1,10 @@
+{
+  "defaults": {
+    "rootElement": "#root"
+  },
+  "urls": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ]
+}
