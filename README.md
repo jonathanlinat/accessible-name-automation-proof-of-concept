@@ -4,7 +4,9 @@ This is an experiment based on set of changes to HTML and related standards call
 
 It mainly uses the experimental global method `window.getComputedAccessibleNode(node)`.
 
-Such project tries to demonstrate that it is theoretically possible to predict what the screen reader will say by focusing on semantic and non semantic elements, thus reducing the need for manual testing.
+Such project tries to demonstrate that it is theoretically possible to predict what the screen reader will say by focusing on semantic and non semantic elements with a bit automated testing, thus reducing the need for manual testing.
+
+[Check out the demo website!](https://accessible-name-automation-proof-of-concept.netlify.app/)
 
 ## Motivation
 
@@ -23,6 +25,8 @@ This project includes, among others, the following:
 - Jest Puppeteer
 - Pa11y CI
 - Webpack
+
+Tests are declared into `./src/app/wrapper/app.accessiblename.spec.js`.
 
 ### Prerequisites
 
