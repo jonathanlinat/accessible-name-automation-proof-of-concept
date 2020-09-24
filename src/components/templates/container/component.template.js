@@ -1,6 +1,13 @@
 import React from 'react'
+import siteDetails from './../../../../site-details'
 
-import { StyledContainerTemplateComponent } from './component.styled'
+import {
+  StyledContainerTemplateComponent,
+  StyledGridTemplateComponent,
+  StyledParagraphTemplateComponent,
+  StyledListTemplateComponent,
+  StyledListItemTemplateComponent
+} from './component.styled'
 
 import { FirstLevelTitleSemanticAtomComponent } from '../../atoms/semantic/title/firstlevel'
 import { ContainerSemanticOrganismComponent } from '../../organisms/semantic/container'
@@ -8,11 +15,22 @@ import { ContainerNonSemanticOrganismComponent } from '../../organisms/nonsemant
 
 const ContainerTemplateComponent = () => (
   <StyledContainerTemplateComponent>
-    <FirstLevelTitleSemanticAtomComponent>Accessible Name Automation Proof of Concept</FirstLevelTitleSemanticAtomComponent>
-    <section>
+    <FirstLevelTitleSemanticAtomComponent>{siteDetails.name}</FirstLevelTitleSemanticAtomComponent>
+    <StyledParagraphTemplateComponent>{siteDetails.description}</StyledParagraphTemplateComponent>
+    <StyledListTemplateComponent>
+      {process.env.NODE_ENV !== 'development' && (
+        <StyledListItemTemplateComponent>
+          <a href='./test-report.html'>Check out the generated test report</a>
+        </StyledListItemTemplateComponent>
+      )}
+      <StyledListItemTemplateComponent>
+        <a href={siteDetails.repositoryUrl}>Check out the source code!</a>
+      </StyledListItemTemplateComponent>
+    </StyledListTemplateComponent>
+    <StyledGridTemplateComponent>
       <ContainerSemanticOrganismComponent />
       <ContainerNonSemanticOrganismComponent />
-    </section>
+    </StyledGridTemplateComponent>
   </StyledContainerTemplateComponent>
 )
 

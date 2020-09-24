@@ -9,13 +9,11 @@ const StyledThemeProviderApp = createGlobalStyle`
     font-size: 16px;
   }
 
-  *, *:before, *:after {
-    box-sizing: inherit;
+  * {
+    box-sizing: border-box;
   }
 
-  html { box-sizing: border-box; }
-
-  body { background-color: #eee; }
+  body { background-color: #f7f7f7; }
 
   pre {
     padding: 1rem !important;
