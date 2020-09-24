@@ -1,9 +1,16 @@
+const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const DynamicCdnWebpackPlugin = require('dynamic-cdn-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = (env, options) => {
+  const isProduction = options.mode === 'production'
+
   let webpackConfig = {
+    output: {
+      path: path.resolve('./dist')
+    },
     module: {
       rules: [
         { test: /\.js$/, exclude: /node_modules/, use: ['babel-loader', 'eslint-loader'] },
@@ -11,10 +18,11 @@ module.exports = (env, options) => {
       ]
     },
     plugins: [
+      new CleanWebpackPlugin(),
       new HtmlWebPackPlugin({
         template: 'src/index.html',
         filename: 'index.html',
-        minify: options.mode === 'production' && {
+        minify: isProduction && {
           collapseWhitespace: true,
           removeComments: true,
           removeRedundantAttributes: true,
@@ -26,7 +34,7 @@ module.exports = (env, options) => {
       new DynamicCdnWebpackPlugin()
     ],
     optimization: {
-      minimize: options.mode === 'production',
+      minimize: isProduction,
       minimizer: [
         new TerserPlugin({
           parallel: true,

@@ -1,23 +1,23 @@
 {
   "name": "accessible-name-automation-proof-of-concept",
-  "description": "This is an experiment based on Accessibility Object Model (AOM). It tries to demonstrate that it is theoretically possible to predict what the screen reader will say by focusing on semantic and non semantic elements with a bit of automated testing, thus reducing the need for manual testing.",
+  "description": "This is an experiment based on Accessibility Object Model (AOM). It tries to demonstrate that it is theoretically possible (in a certain way) to predict what the screen reader will say by focusing on semantic and non semantic elements with a bit of automated testing, thus reducing the need for manual testing.",
   "license": "UNLICENSED",
   "author": "Jonathan Linat <jonathan.linat@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/jonathanlinat/accessible-name-automation-proof-of-concept"
   },
-  "version": "1.1.0",
+  "version": "1.1.2",
   "main": "index.js",
   "scripts": {
-    "build": "concurrently \"npm run subscript:build:clean\" \"npm run test:a11y:accessiblename\" \"npm run subscript:build\"",
+    "build": "run-s \"subscript:build\" \"subscript:copy:test-report\"",
     "start:dev": "npm run subscript:webpack-dev-server -- --open",
     "start:ci": "npm run subscript:webpack-dev-server -- --no-info",
     "test:a11y:violations": "npm run subscript:start-server-and-test subscript:pa11y-ci",
     "test:a11y:accessiblename": "npm run subscript:start-server-and-test subscript:jest",
     "test:a11y:accessiblename:watch": "npm run subscript:start-server-and-test subscript:jest:watch",
     "subscript:build": "webpack --progress --color --mode production",
-    "subscript:build:clean": "rimraf ./dist/**/*",
+    "subscript:copy:test-report": "shx cp ./test-report.html ./dist/test-report.html",
     "subscript:jest": "jest",
     "subscript:jest:watch": "jest --watch",
     "subscript:pa11y-ci": "pa11y-ci -c configuration/pa11y-ci/config.json",
@@ -30,7 +30,7 @@
     "@babel/preset-env": "7.11.5",
     "@babel/preset-react": "7.10.4",
     "babel-loader": "8.1.0",
-    "concurrently": "5.3.0",
+    "clean-webpack-plugin": "3.0.0",
     "dynamic-cdn-webpack-plugin": "5.0.0",
     "eslint": "7.9.0",
     "eslint-config-standard": "14.1.1",
@@ -47,9 +47,10 @@
     "jest-html-reporter": "3.2.0",
     "jest-puppeteer": "4.4.0",
     "module-to-cdn": "3.1.5",
+    "npm-run-all": "^4.1.5",
     "pa11y-ci": "2.4.0",
     "puppeteer": "5.3.1",
-    "rimraf": "3.0.2",
+    "shx": "0.3.2",
     "start-server-and-test": "1.11.4",
     "terser-webpack-plugin": "4.2.2",
     "webpack": "4.44.2",
@@ -72,7 +73,6 @@
         "./node_modules/jest-html-reporter",
         {
           "pageTitle": "Test Report",
-          "outputPath": "./dist/test-report.html",
           "includeFailureMsg": true
         }
       ]
