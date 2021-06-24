@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledBasicLinkSemanticAtomComponent = styled.a`
   font-size: 1em;
@@ -10,6 +10,6 @@ const StyledBasicLinkSemanticAtomComponent = styled.a`
     outline: 2px solid #1b0088;
     outline-offset: 4px;
   }
-`
+`;
 
-export { StyledBasicLinkSemanticAtomComponent }
+export { StyledBasicLinkSemanticAtomComponent };

@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import { StyledSecondLevelTitleSemanticAtomComponent } from './component.styled'
+import { StyledSecondLevelTitleSemanticAtomComponent } from "./component.styled";
 
-const SecondLevelTitleSemanticAtomComponent = props => <StyledSecondLevelTitleSemanticAtomComponent {...props} />
+const SecondLevelTitleSemanticAtomComponent = (props) => (
+  <StyledSecondLevelTitleSemanticAtomComponent {...props} />
+);
 
-export { SecondLevelTitleSemanticAtomComponent }
+export { SecondLevelTitleSemanticAtomComponent };

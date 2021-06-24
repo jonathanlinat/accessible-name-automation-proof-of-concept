@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-import StyledThemeProviderApp from './app.styled'
+import StyledThemeProviderApp from "./app.styled";
 
-const ThemeProviderApp = () => <StyledThemeProviderApp />
+const ThemeProviderApp = () => <StyledThemeProviderApp />;
 
-export { ThemeProviderApp }
+export { ThemeProviderApp };

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledInlinedLinkNonSemanticAtomComponent = styled.span`
   font-size: 1em;
@@ -22,6 +22,6 @@ const StyledInlinedLinkNonSemanticAtomComponent = styled.span`
     overflow: hidden;
     border: 0;
   }
-`
+`;
 
-export { StyledInlinedLinkNonSemanticAtomComponent }
+export { StyledInlinedLinkNonSemanticAtomComponent };

@@ -1,1 +1,1 @@
-module.exports = require('./component.template')
+module.exports = require("./component.template");

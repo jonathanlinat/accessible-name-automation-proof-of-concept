@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import { StyledThirdLevelTitleNonSemanticAtomComponent } from './component.styled'
+import { StyledThirdLevelTitleNonSemanticAtomComponent } from "./component.styled";
 
-const ThirdLevelTitleNonSemanticAtomComponent = props => <StyledThirdLevelTitleNonSemanticAtomComponent {...props} />
+const ThirdLevelTitleNonSemanticAtomComponent = (props) => (
+  <StyledThirdLevelTitleNonSemanticAtomComponent {...props} />
+);
 
-export { ThirdLevelTitleNonSemanticAtomComponent }
+export { ThirdLevelTitleNonSemanticAtomComponent };

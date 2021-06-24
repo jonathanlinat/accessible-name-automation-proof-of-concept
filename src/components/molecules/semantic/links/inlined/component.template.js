@@ -1,32 +1,48 @@
-import React from 'react'
+import React from "react";
 
-import { ElementVariantWrapperAtomComponent } from '../../../../atoms/wrapper/elementvariant'
-import { ElementVariantExampleWrapperAtomComponent } from '../../../../atoms/wrapper/elementvariantexample'
-import { ElementVariantCodeWrapperAtomComponent } from '../../../../atoms/wrapper/elementvariantcode'
-import { FourthLevelTitleSemanticAtomComponent } from '../../../../atoms/semantic/title/fourthlevel'
-import { InlinedLinkSemanticAtomComponent } from '../../../../atoms/semantic/link/inlined'
+import { ElementVariantWrapperAtomComponent } from "../../../../atoms/wrapper/elementvariant";
+import { ElementVariantExampleWrapperAtomComponent } from "../../../../atoms/wrapper/elementvariantexample";
+import { ElementVariantCodeWrapperAtomComponent } from "../../../../atoms/wrapper/elementvariantcode";
+import { FourthLevelTitleSemanticAtomComponent } from "../../../../atoms/semantic/title/fourthlevel";
+import { InlinedLinkSemanticAtomComponent } from "../../../../atoms/semantic/link/inlined";
 
 const codeSnippetCaseText = `<a href="#">
   <span aria-hidden="true">Visible label</span>
   <span class="sr-only">Accessible label</span>
-</a>`
+</a>`;
 const codeSnippetCaseEmoji = `<a href="#">
   <span aria-hidden="true">🔓</span>
   <span class="sr-only">Accessible label</span>
-</a>`
+</a>`;
 
 const InlinedLinksSemanticMoleculeComponent = () => (
   <ElementVariantWrapperAtomComponent>
-    <FourthLevelTitleSemanticAtomComponent>Inlined</FourthLevelTitleSemanticAtomComponent>
+    <FourthLevelTitleSemanticAtomComponent>
+      Inlined
+    </FourthLevelTitleSemanticAtomComponent>
     <ElementVariantExampleWrapperAtomComponent>
-      <InlinedLinkSemanticAtomComponent id='inlinedLinkSemantic' data-case='text' accessibleLabel='Accessible label' visibleLabel='Visible label' />
+      <InlinedLinkSemanticAtomComponent
+        id="inlinedLinkSemantic"
+        data-case="text"
+        accessibleLabel="Accessible label"
+        visibleLabel="Visible label"
+      />
     </ElementVariantExampleWrapperAtomComponent>
-    <ElementVariantCodeWrapperAtomComponent>{codeSnippetCaseText}</ElementVariantCodeWrapperAtomComponent>
+    <ElementVariantCodeWrapperAtomComponent>
+      {codeSnippetCaseText}
+    </ElementVariantCodeWrapperAtomComponent>
     <ElementVariantExampleWrapperAtomComponent>
-      <InlinedLinkSemanticAtomComponent id='inlinedLinkSemantic' data-case='emoji' accessibleLabel='Accessible label' visibleLabel='🔓' />
+      <InlinedLinkSemanticAtomComponent
+        id="inlinedLinkSemantic"
+        data-case="emoji"
+        accessibleLabel="Accessible label"
+        visibleLabel="🔓"
+      />
     </ElementVariantExampleWrapperAtomComponent>
-    <ElementVariantCodeWrapperAtomComponent>{codeSnippetCaseEmoji}</ElementVariantCodeWrapperAtomComponent>
+    <ElementVariantCodeWrapperAtomComponent>
+      {codeSnippetCaseEmoji}
+    </ElementVariantCodeWrapperAtomComponent>
   </ElementVariantWrapperAtomComponent>
-)
+);
 
-export { InlinedLinksSemanticMoleculeComponent }
+export { InlinedLinksSemanticMoleculeComponent };

@@ -1,5 +1,5 @@
-import ReactDOM from 'react-dom'
+import ReactDOM from "react-dom";
 
-import WrapperApp from './app/wrapper'
+import WrapperApp from "./app/wrapper";
 
-ReactDOM.render(WrapperApp, document.getElementById('root'))
+ReactDOM.render(WrapperApp, document.getElementById("root"));

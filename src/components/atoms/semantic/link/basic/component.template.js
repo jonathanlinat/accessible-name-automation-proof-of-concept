@@ -1,16 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import { StyledBasicLinkSemanticAtomComponent } from './component.styled'
+import { StyledBasicLinkSemanticAtomComponent } from "./component.styled";
 
-const BasicLinkSemanticAtomComponent = props => <StyledBasicLinkSemanticAtomComponent {...props} />
+const BasicLinkSemanticAtomComponent = (props) => (
+  <StyledBasicLinkSemanticAtomComponent {...props} />
+);
 
 BasicLinkSemanticAtomComponent.defaultProps = {
-  href: '#'
-}
+  href: "#",
+};
 
 BasicLinkSemanticAtomComponent.propTypes = {
-  href: PropTypes.string.isRequired
-}
+  href: PropTypes.string.isRequired,
+};
 
-export { BasicLinkSemanticAtomComponent }
+export { BasicLinkSemanticAtomComponent };

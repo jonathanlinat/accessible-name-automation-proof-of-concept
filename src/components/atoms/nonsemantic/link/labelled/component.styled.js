@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledLabelledLinkNonSemanticAtomComponent = styled.span`
   font-size: 1em;
@@ -12,6 +12,6 @@ const StyledLabelledLinkNonSemanticAtomComponent = styled.span`
     outline: 2px solid #1b0088;
     outline-offset: 4px;
   }
-`
+`;
 
-export { StyledLabelledLinkNonSemanticAtomComponent }
+export { StyledLabelledLinkNonSemanticAtomComponent };

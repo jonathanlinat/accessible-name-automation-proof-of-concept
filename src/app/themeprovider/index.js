@@ -1,1 +1,1 @@
-module.exports = require('./app.template')
+module.exports = require("./app.template");

@@ -1,16 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import { StyledBasicButtonSemanticAtomComponent } from './component.styled'
+import { StyledBasicButtonSemanticAtomComponent } from "./component.styled";
 
-const BasicButtonSemanticAtomComponent = props => <StyledBasicButtonSemanticAtomComponent {...props} />
+const BasicButtonSemanticAtomComponent = (props) => (
+  <StyledBasicButtonSemanticAtomComponent {...props} />
+);
 
 BasicButtonSemanticAtomComponent.defaultProps = {
-  type: 'button'
-}
+  type: "button",
+};
 
 BasicButtonSemanticAtomComponent.propTypes = {
-  type: PropTypes.string.isRequired
-}
+  type: PropTypes.string.isRequired,
+};
 
-export { BasicButtonSemanticAtomComponent }
+export { BasicButtonSemanticAtomComponent };

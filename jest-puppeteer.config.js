@@ -1,5 +1,5 @@
 module.exports = {
   launch: {
-    args: ['--enable-accessibility-object-model']
-  }
-}
+    args: ["--enable-accessibility-object-model"],
+  },
+};

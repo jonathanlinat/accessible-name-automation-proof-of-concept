@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledInlinedLinkSemanticAtomComponent = styled.a`
   font-size: 1em;
@@ -20,6 +20,6 @@ const StyledInlinedLinkSemanticAtomComponent = styled.a`
     overflow: hidden;
     border: 0;
   }
-`
+`;
 
-export { StyledInlinedLinkSemanticAtomComponent }
+export { StyledInlinedLinkSemanticAtomComponent };

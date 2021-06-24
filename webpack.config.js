@@ -1,37 +1,49 @@
-const path = require('path')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const HtmlWebPackPlugin = require('html-webpack-plugin')
-const DynamicCdnWebpackPlugin = require('dynamic-cdn-webpack-plugin')
-const TerserPlugin = require('terser-webpack-plugin')
+const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const DynamicCdnWebpackPlugin = require("dynamic-cdn-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env, options) => {
-  const isProduction = options.mode === 'production'
+  const isProduction = options.mode === "production";
 
   let webpackConfig = {
     output: {
-      path: path.resolve('./dist')
+      path: path.resolve("./dist"),
     },
     module: {
       rules: [
-        { test: /\.js$/, exclude: /node_modules/, use: ['babel-loader', 'eslint-loader'] },
-        { test: /\.html$/, use: 'html-loader' }
-      ]
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: [
+            "babel-loader",
+            {
+              loader: "eslint-loader",
+              options: {
+                configFile: "eslint.config.json",
+              },
+            },
+          ],
+        },
+        { test: /\.html$/, use: "html-loader" },
+      ],
     },
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebPackPlugin({
-        template: 'src/index.html',
-        filename: 'index.html',
+        template: "src/index.html",
+        filename: "index.html",
         minify: isProduction && {
           collapseWhitespace: true,
           removeComments: true,
           removeRedundantAttributes: true,
           removeScriptTypeAttributes: true,
           removeStyleLinkTypeAttributes: true,
-          useShortDoctype: true
-        }
+          useShortDoctype: true,
+        },
       }),
-      new DynamicCdnWebpackPlugin()
+      new DynamicCdnWebpackPlugin(),
     ],
     optimization: {
       minimize: isProduction,
@@ -42,16 +54,16 @@ module.exports = (env, options) => {
           sourceMap: true,
           terserOptions: {
             output: {
-              comments: false
-            }
-          }
-        })
+              comments: false,
+            },
+          },
+        }),
       ],
       splitChunks: {
-        chunks: 'all'
-      }
-    }
-  }
+        chunks: "all",
+      },
+    },
+  };
 
-  return webpackConfig
-}
+  return webpackConfig;
+};

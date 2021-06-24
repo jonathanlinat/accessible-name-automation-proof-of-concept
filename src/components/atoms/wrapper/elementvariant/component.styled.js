@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledElementVariantWrapperAtomComponent = styled.section`
   margin: 1rem 0;
@@ -6,12 +6,15 @@ const StyledElementVariantWrapperAtomComponent = styled.section`
   border-radius: 4px;
   overflow: hidden;
 
-  > h4, > p {
-    padding: .5rem 1rem;
+  > h4,
+  > p {
+    padding: 0.5rem 1rem;
     background-color: #f8f8f8;
   }
 
-  &:last-child { margin-bottom: 0; }
-`
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
 
-export { StyledElementVariantWrapperAtomComponent }
+export { StyledElementVariantWrapperAtomComponent };

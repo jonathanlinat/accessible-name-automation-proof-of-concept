@@ -1,5 +1,7 @@
 # Accessible Name Automation (Proof of Concept)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c2864d17-015e-4f1e-8fd6-8ba126b10e1c/deploy-status)](https://app.netlify.com/sites/accessible-name-automation-proof-of-concept/deploys)
+
 This is an experiment based on set of changes to HTML and related standards called [Accessibility Object Model (AOM)](https://wicg.github.io/aom/explainer.html).
 
 It mainly uses the experimental global method `window.getComputedAccessibleNode(node)`.
@@ -54,24 +56,30 @@ npm install
 
 Start a local demo.
 
-```
+```bash
 npm run start:dev
 ```
 
 Execute Accessible name tests (semantics) (`getComputedAccessibleNode()`).
 
-```
+```bash
 npm run test:a11y:accessiblename
 ```
 
 Execute Accessibility violation tests (`axe-core`).
 
+```bash
+npm run test:a11y:violations
 ```
-npm run test:a11y:ci
+
+Review generated test report.
+
+```bash
+npm run review:report
 ```
 
 Compile the project.
 
-```
+```bash
 npm run build
 ```

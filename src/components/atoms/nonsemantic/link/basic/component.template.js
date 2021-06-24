@@ -1,16 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import { StyledBasicLinkNonSemanticAtomComponent } from './component.styled'
+import { StyledBasicLinkNonSemanticAtomComponent } from "./component.styled";
 
-const BasicLinkNonSemanticAtomComponent = props => <StyledBasicLinkNonSemanticAtomComponent {...props} />
+const BasicLinkNonSemanticAtomComponent = (props) => (
+  <StyledBasicLinkNonSemanticAtomComponent {...props} />
+);
 
 BasicLinkNonSemanticAtomComponent.defaultProps = {
-  tabIndex: '0'
-}
+  tabIndex: "0",
+};
 
 BasicLinkNonSemanticAtomComponent.propTypes = {
-  tabIndex: PropTypes.string.isRequired
-}
+  tabIndex: PropTypes.string.isRequired,
+};
 
-export { BasicLinkNonSemanticAtomComponent }
+export { BasicLinkNonSemanticAtomComponent };

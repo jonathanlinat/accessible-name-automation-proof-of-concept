@@ -1,21 +1,27 @@
-import React from 'react'
+import React from "react";
 
-import { ElementVariantWrapperAtomComponent } from '../../../../atoms/wrapper/elementvariant'
-import { ElementVariantExampleWrapperAtomComponent } from '../../../../atoms/wrapper/elementvariantexample'
-import { ElementVariantCodeWrapperAtomComponent } from '../../../../atoms/wrapper/elementvariantcode'
-import { FourthLevelTitleSemanticAtomComponent } from '../../../../atoms/semantic/title/fourthlevel'
-import { SecondLevelTitleSemanticAtomComponent } from '../../../../atoms/semantic/title/secondlevel'
+import { ElementVariantWrapperAtomComponent } from "../../../../atoms/wrapper/elementvariant";
+import { ElementVariantExampleWrapperAtomComponent } from "../../../../atoms/wrapper/elementvariantexample";
+import { ElementVariantCodeWrapperAtomComponent } from "../../../../atoms/wrapper/elementvariantcode";
+import { FourthLevelTitleSemanticAtomComponent } from "../../../../atoms/semantic/title/fourthlevel";
+import { SecondLevelTitleSemanticAtomComponent } from "../../../../atoms/semantic/title/secondlevel";
 
-const codeSnippet = '<h2>Visible title</h2>'
+const codeSnippet = "<h2>Visible title</h2>";
 
 const SecondLevelTitlesSemanticMoleculeComponent = () => (
   <ElementVariantWrapperAtomComponent>
-    <FourthLevelTitleSemanticAtomComponent>Second level</FourthLevelTitleSemanticAtomComponent>
+    <FourthLevelTitleSemanticAtomComponent>
+      Second level
+    </FourthLevelTitleSemanticAtomComponent>
     <ElementVariantExampleWrapperAtomComponent>
-      <SecondLevelTitleSemanticAtomComponent id='secondLevelTitleSemantic'>Visible title</SecondLevelTitleSemanticAtomComponent>
+      <SecondLevelTitleSemanticAtomComponent id="secondLevelTitleSemantic">
+        Visible title
+      </SecondLevelTitleSemanticAtomComponent>
     </ElementVariantExampleWrapperAtomComponent>
-    <ElementVariantCodeWrapperAtomComponent>{codeSnippet}</ElementVariantCodeWrapperAtomComponent>
+    <ElementVariantCodeWrapperAtomComponent>
+      {codeSnippet}
+    </ElementVariantCodeWrapperAtomComponent>
   </ElementVariantWrapperAtomComponent>
-)
+);
 
-export { SecondLevelTitlesSemanticMoleculeComponent }
+export { SecondLevelTitlesSemanticMoleculeComponent };

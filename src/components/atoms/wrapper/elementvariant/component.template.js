@@ -1,16 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import { StyledElementVariantWrapperAtomComponent } from './component.styled'
+import { StyledElementVariantWrapperAtomComponent } from "./component.styled";
 
-const ElementVariantWrapperAtomComponent = props => (
+const ElementVariantWrapperAtomComponent = (props) => (
   <StyledElementVariantWrapperAtomComponent {...props}>
     {props.children}
   </StyledElementVariantWrapperAtomComponent>
-)
+);
 
 ElementVariantWrapperAtomComponent.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired
-}
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+};
 
-export { ElementVariantWrapperAtomComponent }
+export { ElementVariantWrapperAtomComponent };

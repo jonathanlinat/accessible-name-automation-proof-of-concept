@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import reset from 'styled-reset'
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
 
 const StyledThemeProviderApp = createGlobalStyle`
   ${reset}
@@ -20,6 +20,6 @@ const StyledThemeProviderApp = createGlobalStyle`
     border: none !important;
     margin: 0 !important;
   }
-`
+`;
 
-export default StyledThemeProviderApp
+export default StyledThemeProviderApp;
